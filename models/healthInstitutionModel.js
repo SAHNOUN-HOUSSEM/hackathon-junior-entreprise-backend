@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const healthInstitutionSchema = new mongoose.Schema({
   name: { type: String, required: true },
   type: { type: String },
+  contactNumber: { type: String },
   location: { type: String },
   doctors: [{ type: mongoose.Schema.Types.ObjectId, ref: "Doctor" }],
   inventories: [{ type: mongoose.Schema.Types.ObjectId, ref: "Inventory" }],
